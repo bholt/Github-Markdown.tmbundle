@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Style: Unordered List Punctuation</string>
+	<key>scope</key>
+	<string>punctuation.list.unordered</string>
+	<key>settings</key>
+	<dict>
+		<key>fontSize</key>
+		<string>1.3em</string>
+	</dict>
+	<key>uuid</key>
+	<string>50BEAF78-68B2-43EA-A879-A8ACB688C760</string>
+</dict>
+</plist>

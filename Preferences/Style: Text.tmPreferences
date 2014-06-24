@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Style: Text</string>
+	<key>scope</key>
+	<string>text.markdown</string>
+	<key>settings</key>
+	<dict>
+		<key>fontName</key>
+		<string>FiraSans-Light</string>
+		<key>fontSize</key>
+		<string>1.2em</string>
+		<key>indentedSoftWrap</key>
+		<dict>
+			<key>format</key>
+			<string>$0</string>
+			<key>match</key>
+			<string>^\s*</string>
+		</dict>
+	</dict>
+	<key>uuid</key>
+	<string>F50E74C8-C795-40B7-9D37-BB2D3314F09F</string>
+</dict>
+</plist>
