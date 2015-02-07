@@ -93,7 +93,7 @@
 					<key>match</key>
 					<string>&amp;(?!([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+);)</string>
 					<key>name</key>
-					<string>meta.other.valid-ampersand.markdown</string>
+					<string>meta.other.valid-ampersand.gfmd</string>
 				</dict>
 				<key>bold</key>
 				<dict>
@@ -144,13 +144,13 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.bold.markdown</string>
+							<string>punctuation.definition.bold.gfmd</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>(?&lt;=\S)(\1)</string>
 					<key>name</key>
-					<string>markup.bold.markdown</string>
+					<string>markup.bold.gfmd</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -228,14 +228,14 @@
 					<key>match</key>
 					<string>&lt;(?![a-z/?\$!])</string>
 					<key>name</key>
-					<string>meta.other.valid-bracket.markdown</string>
+					<string>meta.other.valid-bracket.gfmd</string>
 				</dict>
 				<key>escape</key>
 				<dict>
 					<key>match</key>
 					<string>\\[-`*_#+.!(){}\[\]\\&gt;]</string>
 					<key>name</key>
-					<string>constant.character.escape.markdown</string>
+					<string>constant.character.escape.gfmd</string>
 				</dict>
 				<key>image-inline</key>
 				<dict>
@@ -244,77 +244,77 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>10</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
+							<string>string.other.link.description.title.gfmd</string>
 						</dict>
 						<key>11</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
+							<string>punctuation.definition.string.gfmd</string>
 						</dict>
 						<key>12</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
+							<string>punctuation.definition.string.gfmd</string>
 						</dict>
 						<key>13</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
+							<string>string.other.link.description.title.gfmd</string>
 						</dict>
 						<key>14</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
+							<string>punctuation.definition.string.gfmd</string>
 						</dict>
 						<key>15</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.markdown</string>
+							<string>punctuation.definition.string.gfmd</string>
 						</dict>
 						<key>16</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.metadata.markdown</string>
+							<string>punctuation.definition.metadata.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.markdown</string>
+							<string>string.other.link.description.gfmd</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>invalid.illegal.whitespace.markdown</string>
+							<string>invalid.illegal.whitespace.gfmd</string>
 						</dict>
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.metadata.markdown</string>
+							<string>punctuation.definition.metadata.gfmd</string>
 						</dict>
 						<key>7</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 						<key>8</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.image.markdown</string>
+							<string>markup.underline.link.image.gfmd</string>
 						</dict>
 						<key>9</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -334,7 +334,7 @@
 						(\))
 					 )</string>
 					<key>name</key>
-					<string>meta.image.inline.markdown</string>
+					<string>meta.image.inline.gfmd</string>
 				</dict>
 				<key>image-ref</key>
 				<dict>
@@ -343,38 +343,38 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.markdown</string>
+							<string>string.other.link.description.gfmd</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.markdown</string>
+							<string>punctuation.definition.constant.gfmd</string>
 						</dict>
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>constant.other.reference.link.markdown</string>
+							<string>constant.other.reference.link.gfmd</string>
 						</dict>
 						<key>7</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.markdown</string>
+							<string>punctuation.definition.constant.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>\!(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])[ ]?(\[)(.*?)(\])</string>
 					<key>name</key>
-					<string>meta.image.reference.markdown</string>
+					<string>meta.image.reference.gfmd</string>
 				</dict>
 				<key>italic</key>
 				<dict>
@@ -426,13 +426,13 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.italic.markdown</string>
+							<string>punctuation.definition.italic.gfmd</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>(?&lt;=\S)(\1)((?!\1)|(?=\1\1))</string>
 					<key>name</key>
-					<string>markup.italic.markdown</string>
+					<string>markup.italic.gfmd</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -507,23 +507,23 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.markdown</string>
+							<string>markup.underline.link.gfmd</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(&lt;)((?:mailto:)?[-.\w]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)(&gt;)</string>
 					<key>name</key>
-					<string>meta.link.email.lt-gt.markdown</string>
+					<string>meta.link.email.lt-gt.gfmd</string>
 				</dict>
 				<key>link-inet</key>
 				<dict>
@@ -532,23 +532,23 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.markdown</string>
+							<string>markup.underline.link.gfmd</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(&lt;)((?:https?|ftp)://.*?)(&gt;)</string>
 					<key>name</key>
-					<string>meta.link.inet.markdown</string>
+					<string>meta.link.inet.gfmd</string>
 				</dict>
 				<key>link-inline</key>
 				<dict>
@@ -557,77 +557,77 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>10</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
+							<string>string.other.link.description.title.gfmd</string>
 						</dict>
 						<key>11</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>12</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>13</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
+							<string>string.other.link.description.title.gfmd</string>
 						</dict>
 						<key>14</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>15</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>16</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.metadata.markdown</string>
+							<string>punctuation.definition.metadata.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.title.markdown</string>
+							<string>string.other.link.title.gfmd</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>invalid.illegal.whitespace.markdown</string>
+							<string>invalid.illegal.whitespace.gfmd</string>
 						</dict>
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.metadata.markdown</string>
+							<string>punctuation.definition.metadata.gfmd</string>
 						</dict>
 						<key>7</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 						<key>8</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.markdown</string>
+							<string>markup.underline.link.gfmd</string>
 						</dict>
 						<key>9</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -646,7 +646,7 @@
 						(\))
 					 )</string>
 					<key>name</key>
-					<string>meta.link.inline.markdown</string>
+					<string>meta.link.inline.gfmd</string>
 				</dict>
 				<key>link-ref</key>
 				<dict>
@@ -655,38 +655,38 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.title.markdown</string>
+							<string>string.other.link.title.gfmd</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.begin.markdown</string>
+							<string>punctuation.definition.constant.begin.gfmd</string>
 						</dict>
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>constant.other.reference.link.markdown</string>
+							<string>constant.other.reference.link.gfmd</string>
 						</dict>
 						<key>7</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.end.markdown</string>
+							<string>punctuation.definition.constant.end.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])[ ]?(\[)([^\]]*+)(\])</string>
 					<key>name</key>
-					<string>meta.link.reference.markdown</string>
+					<string>meta.link.reference.gfmd</string>
 				</dict>
 				<key>link-ref-literal</key>
 				<dict>
@@ -695,33 +695,33 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.title.markdown</string>
+							<string>string.other.link.title.gfmd</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.begin.markdown</string>
+							<string>punctuation.definition.constant.begin.gfmd</string>
 						</dict>
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.end.markdown</string>
+							<string>punctuation.definition.constant.end.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])[ ]?(\[)(\])</string>
 					<key>name</key>
-					<string>meta.link.reference.literal.markdown</string>
+					<string>meta.link.reference.literal.gfmd</string>
 				</dict>
 				<key>raw</key>
 				<dict>
@@ -730,20 +730,20 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.raw.markdown</string>
+							<string>punctuation.definition.raw.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict/>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.raw.markdown</string>
+							<string>punctuation.definition.raw.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
 					<string>(`+)([^`]|(?!(?&lt;!`)\1(?!`))`)*+(\1)</string>
 					<key>name</key>
-					<string>markup.raw.inline.markdown</string>
+					<string>markup.raw.inline.gfmd</string>
 				</dict>
 			</dict>
 		</dict>
@@ -762,10 +762,6 @@
 				<dict>
 					<key>include</key>
 					<string>#heading</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#heading2</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -811,13 +807,13 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.quote.markdown</string>
+							<string>punctuation.definition.quote.gfmd</string>
 						</dict>
 					</dict>
 					<key>contentName</key>
-					<string>markup.quote.body.markdown</string>
+					<string>markup.quote.body.gfmd</string>
 					<key>name</key>
-					<string>markup.quote.markdown</string>
+					<string>markup.quote.gfmd</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -840,11 +836,11 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.python.markdown</string>
+							<string>markup.raw.block.python.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -852,7 +848,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -871,11 +867,11 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.ruby.markdown</string>
+							<string>markup.raw.block.ruby.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -883,7 +879,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -896,17 +892,17 @@
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>(^|\G)\s*[`~]{3,}\s*cpp$\n</string>
+							<string>(^|\G)\s*[`~]{3,}\s*scala$\n</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.c++.markdown</string>
+							<string>markup.raw.block.scala.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -914,7 +910,38 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.scala</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*cpp$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.gfmd</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.c++.gfmd</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -927,17 +954,17 @@
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>(^|\G)\s*[`~]{3,}\s*llvm$\n</string>
+							<string>(^|\G)\s*[`~]{3,}\s*\{?r.*\}?$\n</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.c++.markdown</string>
+							<string>markup.raw.block.r.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -945,7 +972,38 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.r</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*llvm$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.gfmd</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.c++.gfmd</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -964,11 +1022,11 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.c.markdown</string>
+							<string>markup.raw.block.c.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -976,7 +1034,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -995,11 +1053,11 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.java.markdown</string>
+							<string>markup.raw.block.java.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -1007,7 +1065,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -1026,11 +1084,11 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.bash.markdown</string>
+							<string>markup.raw.block.bash.gfmd</string>
 							<key>end</key>
 							<string>[`~]{3,}\n</string>
 							<key>endCaptures</key>
@@ -1038,7 +1096,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>markup.raw.border.markdown</string>
+									<string>markup.raw.border.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -1063,11 +1121,11 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>meta.separator.markdown</string>
+									<string>meta.separator.gfmd</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
-							<string>markup.raw.block.markdown</string>
+							<string>markup.raw.block.gfmd</string>
 							<key>end</key>
 							<string>(^)(---\n)</string>
 							<key>endCaptures</key>
@@ -1075,7 +1133,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>meta.separator.markdown</string>
+									<string>meta.separator.gfmd</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -1091,21 +1149,26 @@
 				<key>heading</key>
 				<dict>
 					<key>begin</key>
-					<string>(?:^|\G)(#{1,6})\s*(?=[\S[^#]])</string>
+					<string>(?:^|\G)(#{1,6})(\s*)(?=[\S[^#]])</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.heading.markdown</string>
+							<string>punctuation.definition.heading.gfmd</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.heading.gfmd</string>
 						</dict>
 					</dict>
 					<key>contentName</key>
-					<string>entity.name.$1.markdown</string>
+					<string>entity.title.${1/(#)(#)?(#)?(#)?(#)?(#)?/${6:?6:${5:?5:${4:?4:${3:?3:${2:?2:1}}}}}/}.gfmd</string>
 					<key>end</key>
 					<string>\s*(#{1,6})?$\n?</string>
 					<key>name</key>
-					<string>markup.heading.${1/(#)(#)?(#)?(#)?(#)?(#)?/${6:?6:${5:?5:${4:?4:${3:?3:${2:?2:1}}}}}/}.markdown</string>
+					<string>markup.heading.${1/(#)(#)?(#)?(#)?(#)?(#)?/${6:?6:${5:?5:${4:?4:${3:?3:${2:?2:1}}}}}/}.gfmd</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -1114,12 +1177,55 @@
 						</dict>
 					</array>
 				</dict>
-				<key>heading2</key>
+				<key>heading-alt</key>
 				<dict>
-					<key>match</key>
-					<string>([=*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
+					<key>begin</key>
+					<string>(?x)^([\w:]+(?:\s|$))+$</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>entity.title.1.gfmd</string>
+						</dict>
+					</dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.heading.gfmd</string>
+						</dict>
+					</dict>
 					<key>name</key>
-					<string>markup.heading.1.markdown</string>
+					<string>markup.heading.1.gfmd</string>
+					<key>while</key>
+					<string>(?x)^-{3,}</string>
+				</dict>
+				<key>heading2-alt</key>
+				<dict>
+					<key>begin</key>
+					<string>(?x)^([\w:]+(?:\s|$))+$</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>entity.title.2.gfmd</string>
+						</dict>
+					</dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.heading.gfmd</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>markup.heading.1.gfmd</string>
+					<key>while</key>
+					<string>(?x)^={3,}</string>
 				</dict>
 				<key>html</key>
 				<dict>
@@ -1129,7 +1235,7 @@
 							<key>begin</key>
 							<string>(?i)(^|\G)(?=&lt;(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del).*&lt;/\2\s*&gt;\s*$)</string>
 							<key>contentName</key>
-							<string>source.html.foo</string>
+							<string>source.embedded.html</string>
 							<key>end</key>
 							<string>$</string>
 							<key>patterns</key>
@@ -1144,7 +1250,7 @@
 							<key>begin</key>
 							<string>(?i)(^|\G)(?=&lt;(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del))</string>
 							<key>contentName</key>
-							<string>source.html.foo</string>
+							<string>source.embedded.html</string>
 							<key>patterns</key>
 							<array>
 								<dict>
@@ -1155,6 +1261,39 @@
 							<key>while</key>
 							<string>\G(?!&lt;/\2\s*&gt;)</string>
 						</dict>
+						<dict>
+							<key>begin</key>
+							<string>({%)</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.tag.html</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>source.liquid-template</string>
+							<key>end</key>
+							<string>(%})</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.tag.html</string>
+								</dict>
+							</dict>
+							<key>name</key>
+							<string>meta.liquid-template.html</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.python</string>
+								</dict>
+							</array>
+						</dict>
 					</array>
 				</dict>
 				<key>link-def</key>
@@ -1164,67 +1303,67 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.markdown</string>
+							<string>punctuation.definition.constant.gfmd</string>
 						</dict>
 						<key>10</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>11</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
+							<string>string.other.link.description.title.gfmd</string>
 						</dict>
 						<key>12</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 						<key>13</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.end.markdown</string>
+							<string>punctuation.definition.string.end.gfmd</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>constant.other.reference.link.markdown</string>
+							<string>constant.other.reference.link.gfmd</string>
 						</dict>
 						<key>3</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.constant.markdown</string>
+							<string>punctuation.definition.constant.gfmd</string>
 						</dict>
 						<key>4</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.separator.key-value.markdown</string>
+							<string>punctuation.separator.key-value.gfmd</string>
 						</dict>
 						<key>5</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>markup.underline.link.markdown</string>
+							<string>markup.underline.link.gfmd</string>
 						</dict>
 						<key>7</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.link.markdown</string>
+							<string>punctuation.definition.link.gfmd</string>
 						</dict>
 						<key>8</key>
 						<dict>
 							<key>name</key>
-							<string>string.other.link.description.title.markdown</string>
+							<string>string.other.link.description.title.gfmd</string>
 						</dict>
 						<key>9</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.string.begin.markdown</string>
+							<string>punctuation.definition.string.begin.gfmd</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -1242,14 +1381,14 @@
 									$
 								)</string>
 					<key>name</key>
-					<string>meta.link.reference.def.markdown</string>
+					<string>meta.link.reference.def.gfmd</string>
 				</dict>
 				<key>list_paragraph</key>
 				<dict>
 					<key>begin</key>
 					<string>(^|\G)(?=\S)(?![*+-]\s|[0-9]+\.\s)</string>
 					<key>name</key>
-					<string>meta.paragraph.markdown</string>
+					<string>meta.paragraph.gfmd</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -1284,13 +1423,13 @@
 								<key>3</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.list.unordered.markdown</string>
+									<string>punctuation.list.unordered.gfmd</string>
 								</dict>
 							</dict>
 							<key>comment</key>
 							<string>Currently does not support un-indented second lines.</string>
 							<key>name</key>
-							<string>markup.list.unordered.markdown</string>
+							<string>markup.list.unordered.gfmd</string>
 							<key>patterns</key>
 							<array>
 								<dict>
@@ -1313,11 +1452,11 @@
 								<key>3</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.definition.list.markdown</string>
+									<string>punctuation.list.ordered.gfmd</string>
 								</dict>
 							</dict>
 							<key>name</key>
-							<string>markup.list.numbered.markdown</string>
+							<string>markup.list.numbered.gfmd</string>
 							<key>patterns</key>
 							<array>
 								<dict>
@@ -1343,7 +1482,7 @@
 					<key>begin</key>
 					<string>(^|\G)(?=\S)</string>
 					<key>name</key>
-					<string>meta.paragraph.markdown</string>
+					<string>meta.paragraph.gfmd</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -1358,10 +1497,6 @@
 							<key>include</key>
 							<string>#separator</string>
 						</dict>
-						<dict>
-							<key>include</key>
-							<string>#heading2</string>
-						</dict>
 					</array>
 					<key>while</key>
 					<string>(^|\G)(?!\s*$|#|[ ]{,3}([-*_][ ]{2,}){3,}[ \t]*$\n?|\s*\[.+?\]:|&gt;)</string>
@@ -1371,7 +1506,7 @@
 					<key>begin</key>
 					<string>(^|\G)([ ]{4}|\t)</string>
 					<key>name</key>
-					<string>markup.raw.block.markdown</string>
+					<string>markup.raw.block.gfmd</string>
 					<key>while</key>
 					<string>(^|\G)([ ]{4}|\t)</string>
 				</dict>
@@ -1384,11 +1519,11 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>markup.raw.border.markdown</string>
+							<string>markup.raw.border.gfmd</string>
 						</dict>
 					</dict>
 					<key>contentName</key>
-					<string>markup.raw.block.markdown</string>
+					<string>markup.raw.block.gfmd</string>
 					<key>end</key>
 					<string>[`~]{3,}\n</string>
 					<key>endCaptures</key>
@@ -1396,7 +1531,7 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>markup.raw.border.markdown</string>
+							<string>markup.raw.border.gfmd</string>
 						</dict>
 					</dict>
 					<key>patterns</key>
@@ -1410,15 +1545,15 @@
 				<key>separator</key>
 				<dict>
 					<key>match</key>
-					<string>(^|\G)[ ]{,3}([-*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
+					<string>@@@(^|\G)[ ]{,3}([-*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
 					<key>name</key>
-					<string>meta.separator.markdown</string>
+					<string>meta.separator.gfmd</string>
 				</dict>
 			</dict>
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>text.markdown</string>
+	<string>text.gfmd</string>
 	<key>uuid</key>
 	<string>0532381A-25F1-46A3-A39E-C792801A259B</string>
 </dict>

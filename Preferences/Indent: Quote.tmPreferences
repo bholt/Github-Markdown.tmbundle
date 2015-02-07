@@ -3,24 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Text</string>
+	<string>Indent: Quote</string>
 	<key>scope</key>
-	<string>text.gfmd</string>
+	<string>markup.quote.gfmd</string>
 	<key>settings</key>
 	<dict>
-		<key>fontName</key>
-		<string>Helvetica-Light</string>
-		<key>fontSize</key>
-		<string>1.2em</string>
 		<key>indentedSoftWrap</key>
 		<dict>
 			<key>format</key>
-			<string>$0</string>
+			<string>${1/\s/\t\t/g}\t</string>
 			<key>match</key>
-			<string>^\s*</string>
+			<string>(\A\s*)&gt;(\s+|(?=\w))</string>
 		</dict>
 	</dict>
 	<key>uuid</key>
-	<string>F50E74C8-C795-40B7-9D37-BB2D3314F09F</string>
+	<string>AC88D155-E3F2-422F-A012-76AD6CCB284D</string>
 </dict>
 </plist>

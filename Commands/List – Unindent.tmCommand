@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+line = $stdin.read
+
+indent = "\t"
+if ENV['TM_SOFT_TABS'] == 'YES'
+  indent = ' ' * ENV['TM_TAB_SIZE'].to_i
+end
+
+if /^\t(\s*[-+*].*)/ =~ line
+  $stdout.write($~[1])
+else
+  $stdout.write(line)
+end
+</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>$	</string>
+	<key>name</key>
+	<string>List – Unindent</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>markup.list.unordered</string>
+	<key>uuid</key>
+	<string>6482FC2B-98A8-43CD-BD82-66B1DC2CC836</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

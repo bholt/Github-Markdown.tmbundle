@@ -3,17 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 1</string>
+	<string>Style: HTML Tags</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>meta.tag.*.any.html, meta.liquid-template.html</string>
 	<key>settings</key>
-	<dict>
-		<key>fontSize</key>
-		<string>2.5em</string>
-		<key>underline</key>
-		<string>1</string>
-	</dict>
+	<dict/>
 	<key>uuid</key>
-	<string>57E6B12F-5D51-4501-9611-32E6CF52B336</string>
+	<string>46BB4493-86D6-457C-A577-EE210C16D0BF</string>
 </dict>
 </plist>

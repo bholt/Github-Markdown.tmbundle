@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+line = $stdin.read
+
+if /^(\s*&gt;\s*)(.*)/ =~ line
+  $stdout &lt;&lt; "#{$~[0]}\n#{$~[1]}"
+else
+  $stdout &lt;&lt; "#{line}\n"
+end
+</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Quote – New Line</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>markup.quote.body</string>
+	<key>uuid</key>
+	<string>A8D2DCBF-B614-43C0-99F2-FCD0B8F65F84</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

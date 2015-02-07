@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+line = $stdin.read
+col = ENV['TM_LINE_INDEX'].to_i
+before_cursor = line[0...col]
+after_cursor = line[col..-1]
+
+case line
+when /^\s*([0-9]+)([.):]\s+)(.*)/
+  n = $~[1].to_i + 1
+  fill = $~[2]
+  content = $~[3]
+  $stdout &lt;&lt; (content.empty? ? "\n" : "#{before_cursor}\n#{n}#{fill}#{after_cursor}")
+end
+</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Ordered List – New Item</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>markup.list.numbered.gfmd</string>
+	<key>uuid</key>
+	<string>5628028B-275F-44D4-8AF3-B611B9A30305</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

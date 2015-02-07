@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 1</string>
+	<string>Style: Ordered List</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>punctuation.list.ordered.gfmd</string>
 	<key>settings</key>
 	<dict>
 		<key>fontSize</key>
-		<string>2.5em</string>
-		<key>underline</key>
-		<string>1</string>
+		<string>0.9em</string>
+		<key>foreground</key>
+		<string>#888888c0</string>
 	</dict>
 	<key>uuid</key>
-	<string>57E6B12F-5D51-4501-9611-32E6CF52B336</string>
+	<string>72D27274-584B-49E8-B4EE-77C94A59DA2D</string>
 </dict>
 </plist>

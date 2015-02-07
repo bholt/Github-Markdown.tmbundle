@@ -2,18 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>isDisabled</key>
+	<true/>
 	<key>name</key>
-	<string>Style: Heading 1</string>
+	<string>Folding</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>text.gfmd</string>
 	<key>settings</key>
 	<dict>
-		<key>fontSize</key>
-		<string>2.5em</string>
-		<key>underline</key>
-		<string>1</string>
+		<key>foldingStartMarker</key>
+		<string>^#+</string>
+		<key>foldingStopMarker</key>
+		<string>^\n</string>
 	</dict>
 	<key>uuid</key>
-	<string>57E6B12F-5D51-4501-9611-32E6CF52B336</string>
+	<string>DD6C6E9E-538D-4DF6-889F-6A93F4C4A1E2</string>
 </dict>
 </plist>

@@ -3,17 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 1</string>
+	<string>Separator</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>meta.separator.gfmd, markup.raw.border.gfmd</string>
 	<key>settings</key>
 	<dict>
-		<key>fontSize</key>
-		<string>2.5em</string>
-		<key>underline</key>
-		<string>1</string>
+		<key>background</key>
+		<string>#a0a0a0</string>
 	</dict>
 	<key>uuid</key>
-	<string>57E6B12F-5D51-4501-9611-32E6CF52B336</string>
+	<string>6752E50A-5E9B-4BB9-B46D-B99A47EC9A15</string>
 </dict>
 </plist>

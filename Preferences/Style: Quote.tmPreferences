@@ -3,17 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 1</string>
+	<string>Style: Quote</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>markup.quote.body.gfmd</string>
 	<key>settings</key>
 	<dict>
-		<key>fontSize</key>
-		<string>2.5em</string>
-		<key>underline</key>
+		<key>italic</key>
 		<string>1</string>
 	</dict>
 	<key>uuid</key>
-	<string>57E6B12F-5D51-4501-9611-32E6CF52B336</string>
+	<string>D432F8B4-8CCA-4F06-AF5B-76A54F721553</string>
 </dict>
 </plist>

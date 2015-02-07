@@ -3,17 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 1</string>
+	<string>Style: Link</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>string.other.link.title.gfmd</string>
 	<key>settings</key>
 	<dict>
-		<key>fontSize</key>
-		<string>2.5em</string>
 		<key>underline</key>
 		<string>1</string>
 	</dict>
 	<key>uuid</key>
-	<string>57E6B12F-5D51-4501-9611-32E6CF52B336</string>
+	<string>D445255E-FAB6-45C0-8536-58ED32743805</string>
 </dict>
 </plist>
