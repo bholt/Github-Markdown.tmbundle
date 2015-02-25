@@ -80,6 +80,22 @@
 					<key>include</key>
 					<string>#link-ref-literal</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#latex-math</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#latex-block</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#latex-function</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#link-citation</string>
+				</dict>
 			</array>
 			<key>repository</key>
 			<dict>
@@ -216,6 +232,10 @@
 							<key>include</key>
 							<string>#link-ref</string>
 						</dict>
+						<dict>
+							<key>include</key>
+							<string>#link-citation</string>
+						</dict>
 					</array>
 				</dict>
 				<key>bracket</key>
@@ -287,6 +307,11 @@
 							<string>string.other.link.description.gfmd</string>
 						</dict>
 						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.link.description.gfmd</string>
+						</dict>
+						<key>4</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.string.end.gfmd</string>
@@ -498,7 +523,145 @@
 							<key>include</key>
 							<string>#link-ref</string>
 						</dict>
+						<dict>
+							<key>include</key>
+							<string>#link-citation</string>
+						</dict>
 					</array>
+				</dict>
+				<key>latex-block</key>
+				<dict>
+					<key>begin</key>
+					<string>(\\begin)(\{)(\w+)(\}).*$</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.embedded.latex</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.latex</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>variable.parameter.function.latex</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.latex</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.block.embedded.latex</string>
+					<key>end</key>
+					<string>(\\end)(\{)(\w+)(\})</string>
+					<key>name</key>
+					<string>meta.block.embedded.latex</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#latex-block</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#latex-function</string>
+						</dict>
+					</array>
+				</dict>
+				<key>latex-function</key>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.embedded.latex</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.latex</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.latex</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(\\\w+)(\{).*?(\})</string>
+					<key>name</key>
+					<string>meta.function.embedded.latex</string>
+				</dict>
+				<key>latex-math</key>
+				<dict>
+					<key>begin</key>
+					<string>\$</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.begin.tex</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\$</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.end.tex</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>string.other.math.tex</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\\\$</string>
+							<key>name</key>
+							<string>constant.character.escape.tex</string>
+						</dict>
+					</array>
+				</dict>
+				<key>link-citation</key>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.gfmd</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>constant.other.symbol.citation.gfmd</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>constant.other.symbol.citation.gfmd</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.gfmd</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(\[)\s*(([@#][a-zA-Z0-9:.-]+;?\s*)+)\s*(\])</string>
+					<key>name</key>
+					<string>meta.link.citation.inline.gfmd</string>
 				</dict>
 				<key>link-email</key>
 				<dict>

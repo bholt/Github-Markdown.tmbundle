@@ -5,11 +5,20 @@
 	<key>name</key>
 	<string>Style: Raw</string>
 	<key>scope</key>
-	<string>markup.raw.block, markup.raw, meta.raw.block, markup.raw.inline</string>
+	<string>markup.raw.block, markup.raw, meta.raw.block, markup.raw.inline, meta.function.embedded, meta.block.embedded, string.other.math, meta.tag.inline.any.html, meta.tag.block.any.html, source.embedded.html</string>
 	<key>settings</key>
 	<dict>
 		<key>fontName</key>
 		<string>Hasklig-Light</string>
+		<key>fontSize</key>
+		<string>1.0em</string>
+		<key>indentedSoftWrap</key>
+		<dict>
+			<key>format</key>
+			<string>$0  </string>
+			<key>match</key>
+			<string>^\s*</string>
+		</dict>
 		<key>softWrap</key>
 		<true/>
 	</dict>
