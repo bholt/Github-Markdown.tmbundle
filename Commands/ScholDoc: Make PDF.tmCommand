@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+pdf="${TM_FILENAME%.*}.pdf"
+tex="${TM_FILENAME%.*}.tex"
+# bib="$TM_DIRECTORY/../../hub/sampa-public/bib/sampa-pubs.bib"
+bib=$(cat "$TM_FILEPATH" | ruby -e "require 'yaml'; puts File.expand_path(YAML.load(\$stdin)['biblio-files'][0])")
+cd "$TM_DIRECTORY"
+mkdir -p .tex
+scholdoc --smart --standalone --natbib --bibliography="$bib" --to=latex -o ".tex/$tex" "$TM_FILEPATH"
+cd .tex
+pdflatex $tex
+bibtex "${tex%.*}.aux"
+pdflatex $tex
+pdflatex $tex
+mv "$pdf" "$TM_DIRECTORY"
+open -a Skim "$TM_DIRECTORY/$pdf"
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>ScholDoc: Make PDF</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>scope</key>
+	<string>markdown</string>
+	<key>uuid</key>
+	<string>1C6BBAF6-831C-4E78-A981-3DD1BE66D49C</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

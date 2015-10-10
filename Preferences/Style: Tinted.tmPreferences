@@ -2,16 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>isDisabled</key>
+	<true/>
 	<key>name</key>
-	<string>Style: Quote</string>
+	<string>Style: Tinted</string>
 	<key>scope</key>
-	<string>markup.quote.body</string>
+	<string>madoko.float.markdown</string>
 	<key>settings</key>
 	<dict>
-		<key>italic</key>
-		<string>1</string>
+		<key>background</key>
+		<string>#f0f0f0</string>
 	</dict>
 	<key>uuid</key>
-	<string>D432F8B4-8CCA-4F06-AF5B-76A54F721553</string>
+	<string>AE0CE15D-78FF-4EAA-B9CC-F428F108AB73</string>
 </dict>
 </plist>

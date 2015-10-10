@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Style: Ordered List</string>
 	<key>scope</key>
-	<string>punctuation.list.ordered.gfmd</string>
+	<string>punctuation.list.ordered.markdown</string>
 	<key>settings</key>
 	<dict>
 		<key>fontSize</key>

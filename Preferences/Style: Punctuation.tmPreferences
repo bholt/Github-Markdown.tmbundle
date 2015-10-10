@@ -5,13 +5,13 @@
 	<key>name</key>
 	<string>Style: Punctuation</string>
 	<key>scope</key>
-	<string>punctuation.definition.*.gfmd, punctuation.definition.*.*.gfmd</string>
+	<string>punctuation.definition.*.markdown, punctuation.definition.*.*.markdown</string>
 	<key>settings</key>
 	<dict>
 		<key>fontSize</key>
-		<string>0.8em</string>
+		<string>0.9em</string>
 		<key>foreground</key>
-		<string>#88888860</string>
+		<string>#808080</string>
 	</dict>
 	<key>uuid</key>
 	<string>797D71CF-CBDA-40DF-832B-6D77F7CC0BD5</string>

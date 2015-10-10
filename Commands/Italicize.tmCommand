@@ -23,7 +23,7 @@ STDOUT &lt;&lt; "*#{STDIN.read}*"
 	<key>outputLocation</key>
 	<string>replaceInput</string>
 	<key>scope</key>
-	<string>text.gfmd</string>
+	<string>markdown</string>
 	<key>uuid</key>
 	<string>8A0C1BAC-4D8C-45F3-A2B9-F83383D2C7E5</string>
 	<key>version</key>

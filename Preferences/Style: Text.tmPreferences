@@ -5,20 +5,13 @@
 	<key>name</key>
 	<string>Style: Text</string>
 	<key>scope</key>
-	<string>text.gfmd</string>
+	<string>markdown</string>
 	<key>settings</key>
 	<dict>
 		<key>fontName</key>
-		<string>Helvetica-Light</string>
+		<string>Lato-Light</string>
 		<key>fontSize</key>
-		<string>1.2em</string>
-		<key>indentedSoftWrap</key>
-		<dict>
-			<key>format</key>
-			<string>$0</string>
-			<key>match</key>
-			<string>^\s*</string>
-		</dict>
+		<string>1.25em</string>
 	</dict>
 	<key>uuid</key>
 	<string>F50E74C8-C795-40B7-9D37-BB2D3314F09F</string>

@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Comments</string>
 	<key>scope</key>
-	<string>text.gfmd</string>
+	<string>markdown</string>
 	<key>settings</key>
 	<dict>
 		<key>shellVariables</key>

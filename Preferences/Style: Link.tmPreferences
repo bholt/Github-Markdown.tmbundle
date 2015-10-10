@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Style: Link</string>
 	<key>scope</key>
-	<string>string.other.link.title.gfmd</string>
+	<string>string.other.link.title</string>
 	<key>settings</key>
 	<dict>
 		<key>underline</key>

@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Style: Heading 1</string>
 	<key>scope</key>
-	<string>entity.title.1.gfmd</string>
+	<string>entity.title.1.markdown</string>
 	<key>settings</key>
 	<dict>
 		<key>fontSize</key>

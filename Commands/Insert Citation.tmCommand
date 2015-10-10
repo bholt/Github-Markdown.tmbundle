@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+dir = ENV['TM_DIRECTORY']
+Dir.glob("#{dir}/*.bib").map {|bib|
+  
+}
+</string>
+	<key>name</key>
+	<string>Insert Citation</string>
+	<key>tabTrigger</key>
+	<string>[@</string>
+	<key>uuid</key>
+	<string>BFA7FD43-9E86-4CA8-9E0F-A4EAEFE9092E</string>
+</dict>
+</plist>

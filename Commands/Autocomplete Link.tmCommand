@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+scope = $stdin.read
+
+refs = []
+
+case scope
+when /\[#(.*)\]/
+  #puts "doc ref: '#{$~[1]}'"
+  pre = $~[1]
+  
+  refs = Dir
+    .glob("#{ENV['TM_PROJECT_DIRECTORY']}/**/*.mdk")
+    .map{|f| IO.read(f).scan(/\[#(.*?)\]|{\s*#([a-zA-Z0-9:_-]+).*?}/) }
+    .flatten
+    .uniq
+    .select{|s| s =~ /#{pre}/ }
+    .map{|s| s =~ /#{pre}(.*)/; $~[1] }
+  
+when /\[@(.*)\]/
+   pre = $~[1]
+   
+   refs = Dir
+     .glob("#{ENV['TM_PROJECT_DIRECTORY']}/**/*.bib")
+     .map{|f| IO.read(f).scan(/@\w+\s*{\s*(.+?)\s*,/) }
+     .flatten
+     .select{|s| s =~ /#{pre}/ }
+     .uniq
+     .map{|s| s =~ /#{pre}(.*)/; $~[1] }
+    
+end
+
+if refs.size == 1
+  $stdout.write refs[0]
+else
+  $stdout.write "${1|#{refs.join(',')}|}"
+end
+</string>
+	<key>input</key>
+	<string>scope</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>	</string>
+	<key>name</key>
+	<string>Autocomplete Link</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>scope</key>
+	<string>meta.link.citation.inline.markdown</string>
+	<key>uuid</key>
+	<string>3A1EAC38-BA33-4E0F-965D-3CFEA47D88D5</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

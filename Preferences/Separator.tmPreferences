@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Separator</string>
 	<key>scope</key>
-	<string>meta.separator.gfmd, markup.raw.border.gfmd</string>
+	<string>markup.separator, markup.raw.border</string>
 	<key>settings</key>
 	<dict>
 		<key>background</key>

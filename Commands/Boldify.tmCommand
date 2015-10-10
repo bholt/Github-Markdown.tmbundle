@@ -2,17 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 STDOUT &lt;&lt; "**#{STDIN.read}**"
 </string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@b</string>
 	<key>name</key>
 	<string>Boldify</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
-	<string>text.gfmd</string>
+	<string>markdown</string>
 	<key>uuid</key>
 	<string>C6608084-06B1-4BFD-ACD6-1EAE0FF5B0D0</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

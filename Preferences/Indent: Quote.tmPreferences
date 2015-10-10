@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Indent: Quote</string>
 	<key>scope</key>
-	<string>markup.quote.gfmd</string>
+	<string>markup.quote</string>
 	<key>settings</key>
 	<dict>
 		<key>indentedSoftWrap</key>
