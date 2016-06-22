@@ -11,7 +11,7 @@
 		<key>indentedSoftWrap</key>
 		<dict>
 			<key>format</key>
-			<string>$1\t </string>
+			<string>$1$1   </string>
 			<key>match</key>
 			<string>^(\s*)([-*+&gt;])(\s+|(?=\w))</string>
 		</dict>

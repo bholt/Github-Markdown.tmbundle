@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isDisabled</key>
+	<true/>
+	<key>name</key>
+	<string>Indentation Rules</string>
+	<key>scope</key>
+	<string>markdown.gfmd</string>
+	<key>settings</key>
+	<dict>
+		<key>decreaseIndentPattern</key>
+		<string>```|~~~`</string>
+		<key>increaseIndentPattern</key>
+		<string>```|~~~</string>
+		<key>unIndentedLinePattern</key>
+		<string>^#{1,6}.*$</string>
+	</dict>
+	<key>uuid</key>
+	<string>3945609E-579F-4681-A5DF-2F727A11ECF5</string>
+</dict>
+</plist>

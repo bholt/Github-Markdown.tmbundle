@@ -8,8 +8,6 @@
 	<string>punctuation.list.ordered.markdown</string>
 	<key>settings</key>
 	<dict>
-		<key>fontSize</key>
-		<string>0.9em</string>
 		<key>foreground</key>
 		<string>#888888c0</string>
 	</dict>

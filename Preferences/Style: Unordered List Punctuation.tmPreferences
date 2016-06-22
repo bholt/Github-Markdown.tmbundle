@@ -8,8 +8,10 @@
 	<string>punctuation.list.unordered</string>
 	<key>settings</key>
 	<dict>
-		<key>fontSize</key>
-		<string>1.3em</string>
+		<key>fontName</key>
+		<string>Fira Code</string>
+		<key>foreground</key>
+		<string>#888888</string>
 	</dict>
 	<key>uuid</key>
 	<string>50BEAF78-68B2-43EA-A879-A8ACB688C760</string>

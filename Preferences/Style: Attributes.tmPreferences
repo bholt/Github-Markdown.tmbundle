@@ -3,15 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 5</string>
+	<string>Style: Attributes</string>
 	<key>scope</key>
-	<string>markup.heading.5</string>
+	<string>attributes.markdown</string>
 	<key>settings</key>
 	<dict>
+		<key>bold</key>
+		<integer>0</integer>
+		<key>fontName</key>
+		<string>Monoid-HalfTight-Regular</string>
 		<key>fontSize</key>
-		<string>1.0em</string>
+		<string>0.85em</string>
 	</dict>
 	<key>uuid</key>
-	<string>E8E88768-F3EF-4BD0-ABD6-37D2DEF6F54C</string>
+	<string>C92EF039-DCD9-4CF6-98EC-ADC3BB423A62</string>
 </dict>
 </plist>

@@ -12,35 +12,41 @@ refs = []
 
 case scope
 when /\[#(.*)\]/
-  #puts "doc ref: '#{$~[1]}'"
   pre = $~[1]
   
-  refs = Dir
-    .glob("#{ENV['TM_PROJECT_DIRECTORY']}/**/*.mdk")
-    .map{|f| IO.read(f).scan(/\[#(.*?)\]|{\s*#([a-zA-Z0-9:_-]+).*?}/) }
-    .flatten
-    .uniq
-    .select{|s| s =~ /#{pre}/ }
-    .map{|s| s =~ /#{pre}(.*)/; $~[1] }
+  files = Dir.glob("#{ENV['TM_DIRECTORY']}/**/*.mdk")
+             .delete_if{|p| p =~ /\/out\// }
   
-when /\[@(.*)\]/
-   pre = $~[1]
+  refs = files.map{|f| IO.read(f).scan(/\[#(.*?)\]|{\s*#([a-zA-Z0-9:_-]+).*?}/) }
+              .flatten
+              .select{|s| s =~ /#{pre}/ }
+              .uniq
+  
+  prev = "#"
+  
+when /\[(@.*)\]/
+  scope = $~[1]
    
-   refs = Dir
-     .glob("#{ENV['TM_PROJECT_DIRECTORY']}/**/*.bib")
-     .map{|f| IO.read(f).scan(/@\w+\s*{\s*(.+?)\s*,/) }
-     .flatten
-     .select{|s| s =~ /#{pre}/ }
-     .uniq
-     .map{|s| s =~ /#{pre}(.*)/; $~[1] }
-    
+  cites = scope.split(";") # get each individual citekey
+                .map{|w| w =~ /@(.*)/; $~[1] } # trim '@' off of each
+   
+  # just try to complete the last one
+  prefix = cites.pop
+   
+  bibfiles = Dir.glob("#{ENV['TM_DIRECTORY']}/**/*.bib")
+  bibfiles.delete_if{|p| p =~ /\/out\//}
+  bibfiles &lt;&lt; "#{ENV['HOME']}/Dropbox/all.bib"
+   
+  refs = bibfiles.map{|f| IO.read(f).scan(/@\w+\s*{\s*(.+?)\s*,/) }
+                 .flatten
+                 .select{|s| s =~ /#{prefix}/ }
+                 .uniq
+
+  prev = !cites.empty? ? "@#{cites.join(';@')};@" : "@"
+
 end
 
-if refs.size == 1
-  $stdout.write refs[0]
-else
-  $stdout.write "${1|#{refs.join(',')}|}"
-end
+$stdout.write "[#{prev}${1|#{refs.join(',')}|}]"
 </string>
 	<key>input</key>
 	<string>scope</string>
@@ -55,7 +61,7 @@ end
 	<key>outputFormat</key>
 	<string>snippet</string>
 	<key>outputLocation</key>
-	<string>atCaret</string>
+	<string>replaceInput</string>
 	<key>scope</key>
 	<string>meta.link.citation.inline.markdown</string>
 	<key>uuid</key>

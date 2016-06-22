@@ -3,17 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Text</string>
+	<string>Style: Link URL</string>
 	<key>scope</key>
-	<string>markdown</string>
+	<string>markup.underline.link.markdown</string>
 	<key>settings</key>
 	<dict>
 		<key>fontName</key>
-		<string>Lato</string>
+		<string>Monoid-Tight-Regular</string>
 		<key>fontSize</key>
-		<string>1.33em</string>
+		<string>0.85em</string>
+		<key>softWrap</key>
+		<integer>0</integer>
+		<key>underline</key>
+		<integer>0</integer>
 	</dict>
 	<key>uuid</key>
-	<string>F50E74C8-C795-40B7-9D37-BB2D3314F09F</string>
+	<string>0F224550-F1ED-43CA-B0E7-21E399B3548B</string>
 </dict>
 </plist>

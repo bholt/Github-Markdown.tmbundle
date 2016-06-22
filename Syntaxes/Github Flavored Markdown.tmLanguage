@@ -54,6 +54,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#link-citation</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#image-inline</string>
 				</dict>
 				<dict>
@@ -74,6 +78,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#link-bare</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#link-footnote</string>
 				</dict>
 				<dict>
@@ -86,15 +94,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#latex-block</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#latex-function</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#link-citation</string>
+					<string>#latex-math</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -262,6 +262,10 @@
 						<dict>
 							<key>include</key>
 							<string>#link-inline</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#link-bare</string>
 						</dict>
 						<dict>
 							<key>include</key>
@@ -598,6 +602,10 @@
 						</dict>
 						<dict>
 							<key>include</key>
+							<string>#link-bare</string>
+						</dict>
+						<dict>
+							<key>include</key>
 							<string>#link-inet</string>
 						</dict>
 						<dict>
@@ -699,6 +707,46 @@
 					<string>(\\\w+)(\{).*?(\})</string>
 					<key>name</key>
 					<string>meta.function.embedded.latex</string>
+				</dict>
+				<key>latex-math</key>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.math.markdown</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.math.markdown</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.math.markdown</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(\$)(.*?)(\$)</string>
+					<key>name</key>
+					<string>meta.math.markdown</string>
+				</dict>
+				<key>link-bare</key>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.markdown</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(https?://\S+)</string>
+					<key>name</key>
+					<string>meta.link.bare.markdown</string>
 				</dict>
 				<key>link-citation</key>
 				<dict>
@@ -1258,6 +1306,37 @@
 						</dict>
 						<dict>
 							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*(?:x86|asm)$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.x86.markdown</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.asm.x86</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
 							<string>(^|\G)\s*[`~]{3,}\s*\{?r.*\}?$\n</string>
 							<key>beginCaptures</key>
 							<dict>
@@ -1382,7 +1461,38 @@
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>(^|\G)\s*[`~]{3,}\s*bash$\n</string>
+							<string>(^|\G)\s*[`~]{3,}\s*js$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.java.markdown</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.js</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*(bash|sh)$\n</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>0</key>
@@ -1571,7 +1681,7 @@
 					<array>
 						<dict>
 							<key>begin</key>
-							<string>(?i)(^|\G)(?=&lt;(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del).*&lt;/\2\s*&gt;\s*$)</string>
+							<string>(?i)(^|\G)(?=&lt;(p|div|h[1-6]|style|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del).*&lt;/\2\s*&gt;\s*$)</string>
 							<key>contentName</key>
 							<string>source.embedded.html</string>
 							<key>end</key>
@@ -1784,107 +1894,166 @@
 				</dict>
 				<key>madoko_float</key>
 				<dict>
-					<key>begin</key>
-					<string>^\s*[~]{1,2}\s*(\w+)</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>markup.heading.4.markdown</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>meta.floatdata.markdown</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>[~]{1,2}\n</string>
-					<key>name</key>
-					<string>madoko.float.markdown</string>
 					<key>patterns</key>
 					<array>
 						<dict>
 							<key>begin</key>
-							<string>(^|\G)(\|)</string>
-							<key>name</key>
-							<string>markup.raw.block.table.markdown</string>
-							<key>while</key>
-							<string>(^|\G)(\|)</string>
-						</dict>
-						<dict>
-							<key>begin</key>
-							<string>\{</string>
+							<string>^\s*([~]+)\s*(TexRaw)</string>
 							<key>beginCaptures</key>
 							<dict>
-								<key>0</key>
+								<key>2</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.definition.brace.markdown</string>
+									<string>markup.heading.4.markdown</string>
 								</dict>
 							</dict>
 							<key>end</key>
-							<string>\}</string>
-							<key>endCaptures</key>
-							<dict>
-								<key>0</key>
-								<dict>
-									<key>name</key>
-									<string>punctuation.definition.brace.markdown</string>
-								</dict>
-							</dict>
+							<string>\1\n</string>
 							<key>name</key>
-							<string>meta.floatdata.markdown</string>
+							<string>madoko.float.texraw.markdown</string>
 							<key>patterns</key>
 							<array>
 								<dict>
-									<key>captures</key>
-									<dict>
-										<key>1</key>
-										<dict>
-											<key>name</key>
-											<string>variable.floatdata.markdown</string>
-										</dict>
-										<key>2</key>
-										<dict>
-											<key>name</key>
-											<string>keyword.operator.markdown</string>
-										</dict>
-										<key>3</key>
-										<dict>
-											<key>name</key>
-											<string>string.quoted.markdown</string>
-										</dict>
-									</dict>
-									<key>match</key>
-									<string>([\w_-]+)(=)(".*?")</string>
-									<key>name</key>
-									<string>meta.floatdata.entry.markdown</string>
-								</dict>
-								<dict>
-									<key>captures</key>
-									<dict>
-										<key>0</key>
-										<dict>
-											<key>name</key>
-											<string>constant.other.symbol.id.markdown.mdk</string>
-										</dict>
-									</dict>
-									<key>match</key>
-									<string>\#[\w_\-:.]+</string>
-									<key>name</key>
-									<string>meta.floatdata.symbol.markdown</string>
+									<key>include</key>
+									<string>text.tex.embed</string>
 								</dict>
 							</array>
 						</dict>
 						<dict>
-							<key>include</key>
-							<string>#inline</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>#embedded_code</string>
+							<key>begin</key>
+							<string>^\s*([~]+)\s*([A-Z]\w+)</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>markup.heading.4.markdown</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>meta.floatdata.markdown</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>\1\n</string>
+							<key>name</key>
+							<string>madoko.float.markdown</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>begin</key>
+									<string>(^|\G)(\|)</string>
+									<key>name</key>
+									<string>markup.raw.block.table.markdown</string>
+									<key>while</key>
+									<string>(^|\G)(\|)</string>
+								</dict>
+								<dict>
+									<key>begin</key>
+									<string>\{</string>
+									<key>beginCaptures</key>
+									<dict>
+										<key>0</key>
+										<dict>
+											<key>name</key>
+											<string>punctuation.definition.brace.markdown</string>
+										</dict>
+									</dict>
+									<key>end</key>
+									<string>\}</string>
+									<key>endCaptures</key>
+									<dict>
+										<key>0</key>
+										<dict>
+											<key>name</key>
+											<string>punctuation.definition.brace.markdown</string>
+										</dict>
+									</dict>
+									<key>name</key>
+									<string>meta.floatdata.markdown</string>
+									<key>patterns</key>
+									<array>
+										<dict>
+											<key>begin</key>
+											<string>([\w_-]+)(=)(")</string>
+											<key>beginCaptures</key>
+											<dict>
+												<key>1</key>
+												<dict>
+													<key>name</key>
+													<string>variable.floatdata.markdown</string>
+												</dict>
+												<key>2</key>
+												<dict>
+													<key>name</key>
+													<string>keyword.operator.markdown</string>
+												</dict>
+												<key>3</key>
+												<dict>
+													<key>name</key>
+													<string>string.quoted.markdown</string>
+												</dict>
+											</dict>
+											<key>contentName</key>
+											<string>string.quoted.markdown</string>
+											<key>end</key>
+											<string>"</string>
+											<key>endCaptures</key>
+											<dict>
+												<key>0</key>
+												<dict>
+													<key>name</key>
+													<string>string.quoted.markdown</string>
+												</dict>
+											</dict>
+											<key>name</key>
+											<string>meta.floatdata.entry.markdown</string>
+											<key>patterns</key>
+											<array>
+												<dict>
+													<key>include</key>
+													<string>#inline</string>
+												</dict>
+											</array>
+										</dict>
+										<dict>
+											<key>captures</key>
+											<dict>
+												<key>0</key>
+												<dict>
+													<key>name</key>
+													<string>constant.other.symbol.id.markdown.mdk</string>
+												</dict>
+											</dict>
+											<key>match</key>
+											<string>\#[\w_\-:.]+</string>
+											<key>name</key>
+											<string>meta.floatdata.symbol.markdown</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#inline</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#embedded_code</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#madoko_float</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#raw_block_github</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#lists</string>
+								</dict>
+							</array>
 						</dict>
 					</array>
 				</dict>
@@ -1953,13 +2122,6 @@
 							<string>markup.raw.border.markdown</string>
 						</dict>
 					</dict>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>source.ruby</string>
-						</dict>
-					</array>
 				</dict>
 				<key>separator</key>
 				<dict>

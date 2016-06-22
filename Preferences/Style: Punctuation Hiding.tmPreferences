@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Heading 5</string>
+	<string>Style: Punctuation Hiding</string>
 	<key>scope</key>
-	<string>markup.heading.5</string>
+	<string>punctuation.definition.heading, punctuation.definition.bold, punctuation.definition.italic</string>
 	<key>settings</key>
 	<dict>
 		<key>fontSize</key>
-		<string>1.0em</string>
+		<string>0.7em</string>
 	</dict>
 	<key>uuid</key>
-	<string>E8E88768-F3EF-4BD0-ABD6-37D2DEF6F54C</string>
+	<string>3C02CA78-6315-4CF1-92DF-746ECC208793</string>
 </dict>
 </plist>

@@ -7,10 +7,7 @@
 	<key>scope</key>
 	<string>constant.other.symbol.citation</string>
 	<key>settings</key>
-	<dict>
-		<key>fontSize</key>
-		<string>1.2em</string>
-	</dict>
+	<dict/>
 	<key>uuid</key>
 	<string>1DC6162E-609E-49D9-96A2-7EF61F02D808</string>
 </dict>

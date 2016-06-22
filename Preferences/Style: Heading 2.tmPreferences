@@ -8,8 +8,6 @@
 	<string>markup.heading.2</string>
 	<key>settings</key>
 	<dict>
-		<key>fontName</key>
-		<string>Baskerville</string>
 		<key>fontSize</key>
 		<string>2.0em</string>
 	</dict>
