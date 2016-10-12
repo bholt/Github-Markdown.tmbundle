@@ -1560,7 +1560,7 @@
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>(\A)(.*?:)(.*)$</string>
+							<string>(\A)([\w ]*?:)(.*)$</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>2</key>
@@ -1591,6 +1591,87 @@
 							<string>meta.frontmatter.markdown</string>
 							<key>while</key>
 							<string>(^)(?:(.*?:)(.*)|(\s*))$</string>
+						</dict>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>entity.name.tag.yaml</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>string.unquoted.yaml</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>~([\w ]*?)\s*:(.*)$</string>
+							<key>name</key>
+							<string>meta.frontmatter.markdown</string>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(@html\s*)?(\.[\w-]+|\w+)\s*{</string>
+							<key>captures</key>
+							<dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>entity.name.tag.yaml</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>}</string>
+							<key>name</key>
+							<string>meta.frontmatter.css.markdown</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>captures</key>
+									<dict>
+										<key>1</key>
+										<dict>
+											<key>name</key>
+											<string>entity.name.tag.yaml</string>
+										</dict>
+										<key>3</key>
+										<dict>
+											<key>name</key>
+											<string>string.unquoted.yaml</string>
+										</dict>
+									</dict>
+									<key>match</key>
+									<string>([\w-]+)\s*(=|:)\s*('.*?'|".*?"|[^ ]+)</string>
+									<key>name</key>
+									<string>meta.inner.yaml</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>\.\w+</string>
+									<key>name</key>
+									<string>constant.other.symbol.inner.css</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>^((?:\w+\s+){0,2}(?:\w+)):$</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>entity.name.tag.yaml</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>string.unquoted.yaml</string>
+							<key>name</key>
+							<string>meta.frontmatter.multiline.yaml</string>
+							<key>while</key>
+							<string>^\t</string>
 						</dict>
 					</array>
 				</dict>
