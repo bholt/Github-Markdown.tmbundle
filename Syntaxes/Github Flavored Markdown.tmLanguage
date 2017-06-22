@@ -143,6 +143,12 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string>(?&lt;=[\s\[\{])(?:@|\.)[a-zA-Z0-9\-:_]+</string>
+					<key>name</key>
+					<string>constant.other.symbol.id.markdown.mdk</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>\[[^\[\]]*?\]{.todo}|\[(?:todo|TODO):\s*.*?\]</string>
 					<key>name</key>
 					<string>entity.todo.markdown</string>
@@ -744,7 +750,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(https?://\S+)</string>
+					<string>&lt;?(\w{3,}://[^&gt; \t]+)&gt;?</string>
 					<key>name</key>
 					<string>meta.link.bare.markdown</string>
 				</dict>
@@ -1461,6 +1467,99 @@
 						</dict>
 						<dict>
 							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*css$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.css.markdown</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.css</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*go$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.java.markdown</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.go</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)\s*[`~]{3,}\s*sql$\n</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.raw.block.sql.markdown</string>
+							<key>end</key>
+							<string>[`~]{3,}\n</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>markup.raw.border.markdown</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.sql</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
 							<string>(^|\G)\s*[`~]{3,}\s*js$\n</string>
 							<key>beginCaptures</key>
 							<dict>
@@ -1535,7 +1634,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>meta.separator.markdown</string>
+									<string>meta.separator.frontmatter.markdown</string>
 								</dict>
 							</dict>
 							<key>contentName</key>
@@ -1547,7 +1646,7 @@
 								<key>0</key>
 								<dict>
 									<key>name</key>
-									<string>meta.separator.markdown</string>
+									<string>meta.separator.frontmatter.markdown</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
@@ -1555,6 +1654,37 @@
 								<dict>
 									<key>include</key>
 									<string>source.yaml</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(\A)(\+\+\+\n)</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>meta.separator.frontmatter.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>meta.frontmatter.markdown</string>
+							<key>end</key>
+							<string>(^)(\+\+\+\n)</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>meta.separator.frontmatter.markdown</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.toml</string>
 								</dict>
 							</array>
 						</dict>
@@ -1762,6 +1892,14 @@
 					<array>
 						<dict>
 							<key>begin</key>
+							<string>&lt;!---</string>
+							<key>end</key>
+							<string>---&gt;</string>
+							<key>name</key>
+							<string>comment.block.html</string>
+						</dict>
+						<dict>
+							<key>begin</key>
 							<string>(?i)(^|\G)(?=&lt;(p|div|h[1-6]|style|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del).*&lt;/\2\s*&gt;\s*$)</string>
 							<key>contentName</key>
 							<string>source.embedded.html</string>
@@ -1911,6 +2049,74 @@
 				<dict>
 					<key>patterns</key>
 					<array>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)([ ]{0,3})([*+-]) (\[ ?\])([ ]{1,3}|\t)</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.list.unordered.markdown</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.list.todobox.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.list.todo.incomplete.markdown</string>
+							<key>name</key>
+							<string>markup.list.unordered.todo.markdown</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#list_paragraph</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#markdown_block</string>
+								</dict>
+							</array>
+							<key>while</key>
+							<string>\G([ ]{4}|\t|$)</string>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>(^|\G)([ ]{0,3})([*+-]) (\[x\])([ ]{1,3}|\t)</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.list.unordered.markdown</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.list.todobox.markdown</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>markup.list.todo.completed.markdown</string>
+							<key>name</key>
+							<string>markup.list.unordered.todo.markdown</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#list_paragraph</string>
+								</dict>
+								<dict>
+									<key>include</key>
+									<string>#markdown_block</string>
+								</dict>
+							</array>
+							<key>while</key>
+							<string>\G([ ]{4}|\t|$)</string>
+						</dict>
 						<dict>
 							<key>begin</key>
 							<string>(^|\G)([ ]{0,3})([*+-])([ ]{1,3}|\t)</string>
@@ -2109,6 +2315,20 @@
 											</dict>
 											<key>match</key>
 											<string>\#[\w_\-:.]+</string>
+											<key>name</key>
+											<string>meta.floatdata.symbol.markdown</string>
+										</dict>
+										<dict>
+											<key>captures</key>
+											<dict>
+												<key>0</key>
+												<dict>
+													<key>name</key>
+													<string>constant.other.symbol.id.markdown.mdk</string>
+												</dict>
+											</dict>
+											<key>match</key>
+											<string>\@[\w_\-:.]+</string>
 											<key>name</key>
 											<string>meta.floatdata.symbol.markdown</string>
 										</dict>

@@ -9,9 +9,9 @@
 	<key>settings</key>
 	<dict>
 		<key>fontName</key>
-		<string>Lato</string>
+		<string>SF Hello</string>
 		<key>fontSize</key>
-		<string>1.33em</string>
+		<string>1.2em</string>
 	</dict>
 	<key>uuid</key>
 	<string>F50E74C8-C795-40B7-9D37-BB2D3314F09F</string>

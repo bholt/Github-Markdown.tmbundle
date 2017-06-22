@@ -9,7 +9,7 @@
 	<key>settings</key>
 	<dict>
 		<key>fontName</key>
-		<string>Monoid-HalfTight-Regular</string>
+		<string>Monoid-Tight-Regular</string>
 		<key>fontSize</key>
 		<string>1em</string>
 		<key>indentedSoftWrap</key>

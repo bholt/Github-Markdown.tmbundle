@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Style: Heading 1</string>
 	<key>scope</key>
-	<string>entity.title.1.markdown</string>
+	<string>entity.title.1.markdown, markup.heading.1</string>
 	<key>settings</key>
 	<dict>
 		<key>fontSize</key>

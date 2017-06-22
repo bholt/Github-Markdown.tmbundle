@@ -2,16 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>content</key>
+	<string>✗</string>
 	<key>name</key>
-	<string>Style: Heading 2</string>
+	<string>Cross</string>
 	<key>scope</key>
-	<string>markup.heading.2</string>
-	<key>settings</key>
-	<dict>
-		<key>fontSize</key>
-		<string>1.9em</string>
-	</dict>
+	<string>markdown.gfmd</string>
+	<key>tabTrigger</key>
+	<string>cross</string>
 	<key>uuid</key>
-	<string>717EC1FE-4259-4C2F-93A0-74D36ECCACA7</string>
+	<string>819070E9-F95F-43C5-9EE5-B87DDCF6ED4C</string>
 </dict>
 </plist>
