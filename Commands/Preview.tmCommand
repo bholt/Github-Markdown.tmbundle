@@ -6,7 +6,7 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/bin/bash
-cat | /usr/local/bin/pandoc --from=markdown_github --to=html5 --template="$TM_BUNDLE_SUPPORT/template.html"
+cat | /usr/local/bin/pandoc --metadata title="" --from=gfm --to=html5 --template="$TM_BUNDLE_SUPPORT/template.html"
 </string>
 	<key>input</key>
 	<string>selection</string>
