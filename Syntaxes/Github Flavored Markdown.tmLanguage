@@ -1615,8 +1615,39 @@
 							<key>patterns</key>
 							<array>
 								<dict>
-									<key>include</key>
-									<string>source.shell</string>
+									<key>match</key>
+									<string>^\s*#.*$</string>
+									<key>name</key>
+									<string>comment.line.shell</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>^\s*\$</string>
+									<key>name</key>
+									<string>markup.bold.shell</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>\$\w+</string>
+									<key>name</key>
+									<string>variable.other.shell</string>
+								</dict>
+								<dict>
+									<key>captures</key>
+									<dict>
+										<key>1</key>
+										<dict>
+											<key>name</key>
+											<string>variable.other.shell</string>
+										</dict>
+										<key>2</key>
+										<dict>
+											<key>name</key>
+											<string>string.interpolated.shell</string>
+										</dict>
+									</dict>
+									<key>match</key>
+									<string>(\$)\((.*?)\)</string>
 								</dict>
 							</array>
 						</dict>
